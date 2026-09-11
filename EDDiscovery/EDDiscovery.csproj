@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" InitialTargets="Version;ClientID" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -422,6 +422,15 @@
     </Compile>
     <Compile Include="UserControls\Overlays\UserControlMiningOverlay.Designer.cs">
       <DependentUpon>UserControlMiningOverlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Overlays\SurfaceMiningControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Overlays\UserControlSurfaceMining.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Overlays\UserControlSurfaceMining.Designer.cs">
+      <DependentUpon>UserControlSurfaceMining.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\3DMap\UserControl3DMap.cs">
       <SubType>UserControl</SubType>

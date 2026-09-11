@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright 2017-2025 EDDiscovery development team
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
@@ -94,6 +94,7 @@ namespace EDDiscovery
             Squadrons = 67,
             PowerplayMerits = 68,
             Bindings = 69,
+            SurfaceMiningOverlay = 70,
             // ****** ADD More here DO NOT RENUMBER *****
         };
 
@@ -177,6 +178,7 @@ namespace EDDiscovery
             { new PanelInfo( PanelIDs.Compass, typeof(UserControlCompass), "Compass", "Compass", "Compass overlay to show bearing to planetary coordinates") },
             { new PanelInfo( PanelIDs.MissionOverlay, typeof(UserControlMissionOverlay), "Mission Overlay", "MissionOV", "Mission List overlay") },
             { new PanelInfo( PanelIDs.MiningOverlay, typeof(UserControlMiningOverlay), "Mining Overlay", "MiningOV", "Mining overlay") },
+            { new PanelInfo( PanelIDs.SurfaceMiningOverlay, typeof(UserControlSurfaceMining), "Surface Mining", "SurfaceMiningOV", "Surface Mining Map overlay") },
             { new PanelInfo( PanelIDs.Docking, typeof(DockingPanel), "Docking Panel", "DockingPanel", "Docking Panel shows pad location" ) },
           //  { new PanelInfo( PanelIDs.AutoPanel, typeof(AutoPanel), "Auto Panel", "AutoPanel", "Auto Panel" ) },      // NOT YET
             { new PanelInfo( PanelIDs.Travel, typeof(TravelPanel), "Travel Panel", "TravelPanel", "Travel Panel showing current position information" ) },
