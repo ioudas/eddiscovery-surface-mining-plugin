@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="EDDDLLInterfaces">
+      <HintPath>..\EDDiscovery\EDDiscovery\bin\$(Configuration)\EDDDLLInterfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EliteDangerousCore">
+      <HintPath>..\EDDiscovery\EDDiscovery\bin\$(Configuration)\EliteDangerous.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ExtendedControls">
+      <HintPath>..\EDDiscovery\EDDiscovery\bin\$(Configuration)\ExtendedControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="QuickJSON">
+      <HintPath>..\EDDiscovery\EDDiscovery\bin\$(Configuration)\QuickJSON.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BaseUtils">
+      <HintPath>..\EDDiscovery\EDDiscovery\bin\$(Configuration)\BaseUtils.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="**\*.resx" />
+    <EmbeddedResource Include="SurfaceMiningOverlay.png" />
+  </ItemGroup>
+
+</Project>
