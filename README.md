@@ -2,7 +2,7 @@
 <img width="140" height="136" alt="image" src="https://github.com/user-attachments/assets/9ed59006-e51c-4c07-b351-701de0480173" />
 
 
-A transparent overlay panel for EDDiscovery designed to assist with planetary surface mining in Elite Dangerous. It provides a localized radar map that tracks your position and custom mining deposits relative to a specific surface coordinate.
+A transparent overlay panel for EDDiscovery designed to assist with Rhino surface mining. It reads your current live position so you can quickly register the deposits that you find. You only need to input the number of rigs that you managed to squeeze into it.
 
 
 <img width="3439" height="1439" alt="Screenshot 2026-09-11 210448" src="https://github.com/user-attachments/assets/1b2dd2df-b69a-47cc-92c3-54c7a5600bbc" />
