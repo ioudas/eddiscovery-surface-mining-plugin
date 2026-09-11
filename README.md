@@ -1,4 +1,4 @@
-# Surface Mining Overlay
+# EDDiscovery Surface Mining Overlay Plugin
 <img width="140" height="136" alt="image" src="https://github.com/user-attachments/assets/9ed59006-e51c-4c07-b351-701de0480173" />
 
 
