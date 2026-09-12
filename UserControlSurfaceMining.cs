@@ -24,7 +24,7 @@ namespace EDSurfaceMiningOverlay
         private string current_body = "";
         
         private string csvFilePath;
-        private string defaultResources = "Palladium, Gold, Silver, Bertrandite, Indite, Gallite, Coltan, Uraninite, Lepidolite, Cobalt, Rutile, Water, Iridium, Helium, Helium-3, Bastnasite, Deuterium, Thortveitite, Quartz Pyroxenite, Olivine, Periclase Dunite, Sapphire, Diamond, Ruby, Magnesite";
+        private string defaultResources = "Alexandrite,Bastnäsite,Bauxite,Benitoite,Bertrandite,Bromellite,Coltan,Cryolite,Deuterium,Diamond,Gallite,Goslarite,Grandidierite,Haematite,Indite,Jadeite,Lepidolite,Lithium Hydroxide,Low Temperature Diamonds,Magnesite,Methane Clathrate,Methanol Monohydrate Crystals,Moissanite,Monazite,Musgravite,Olivine,Painite,Periclase Dunite,Pyrophyllite,Quartz Pyroxenite,Rhodplumsite,Ruby,Rutile,Sapphire,Serendibite,Taaffeite,Thortveitite,Uraninite,Void Opal,Aluminium,Beryllium,Bismuth,Cobalt,Copper,Gallium,Gold,Hafnium 178,Indium,Iridium,Lanthanum,Lithium,Osmium,Palladium,Platinum,Praseodymium,Samarium,Silver,Steel,Tantalum,Thallium,Thorium,Titanium,Uranium";
 
         public UserControlSurfaceMining()
         {
