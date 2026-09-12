@@ -24,6 +24,7 @@ jobs:
       with:
         repository: EDDiscovery/EDDiscovery
         path: EDDiscovery
+        submodules: recursive
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
