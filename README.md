@@ -29,6 +29,7 @@ A transparent overlay panel for EDDiscovery designed to assist with planetary su
 2. **Log Resources:** Drive your SRV to a mining spot and use **Add Mining Deposit** to drop a resource marker at your current coordinates. Input # of rigs and resource type.
 
 <img width="401" height="163" alt="Screenshot 2026-09-11 211652" src="https://github.com/user-attachments/assets/cd149e0e-37c2-415f-a6c2-d5b369411723" />
+
 3. **Navigate:** The panel will automatically track your ship/SRV position, heading, and distance relative to the center origin.
 
 <img width="672" height="690" alt="Screenshot 2026-09-11 220254" src="https://github.com/user-attachments/assets/a209eb1f-4343-4a62-a0ae-762f396fff9e" />
