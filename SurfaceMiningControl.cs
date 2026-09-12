@@ -154,8 +154,8 @@ namespace EDSurfaceMiningOverlay
             int centerX = maxRadius + 10;
             int centerY = maxRadius + 35; // Leave room for top text
 
-            // Map scale (e.g., max distance is 5.0km)
-            double maxDist = 5.0; 
+            // Initial map scale (it will zoom out as player/deposits move outside initial range)
+            double maxDist = 2.5; // kilometers
             
             var visibleDeposits = deposits.Where(d => d.SpotNum == CenterSpotNumber && d.System == CurrentSystem && d.Planet == CurrentBody && !d.IsCenter).ToList();
             if (visibleDeposits.Any() && !double.IsNaN(CenterLat) && !double.IsNaN(CenterLong))
@@ -170,6 +170,8 @@ namespace EDSurfaceMiningOverlay
                     maxDist = Math.Max(maxDist, distToPlayer * 1.1);
                 }
             }
+            
+            // stop zooming out after 10 km and use directional chevron instead
             if (maxDist > 10.0)
             {
                 maxDist = 10.0;
@@ -266,11 +268,9 @@ namespace EDSurfaceMiningOverlay
                 if (!playerOffScreen)
                 {
                     int scanRadiusPx = (int)(2.0 / maxDist * maxRadius);
-                    using (var pen = new Pen(Color.LightGray))
-                    {
-                        pen.DashStyle = DashStyle.Dash;
-                        e.Graphics.DrawEllipse(pen, px - scanRadiusPx, py - scanRadiusPx, scanRadiusPx * 2, scanRadiusPx * 2);
-                    }
+                    using var pen = new Pen(Color.LightGray);
+                    pen.DashStyle = DashStyle.Dash;
+                    e.Graphics.DrawEllipse(pen, px - scanRadiusPx, py - scanRadiusPx, scanRadiusPx * 2, scanRadiusPx * 2);
                 }
 
                 // Draw player triangle or chevron
