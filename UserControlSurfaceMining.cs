@@ -282,7 +282,7 @@ namespace EDSurfaceMiningOverlay
                         {
                             if (double.IsNaN(lastLat) || double.IsNaN(lastLon))
                             {
-                                MessageBox.Show("No current position available. Cannot add new signal.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("No current position available. Move a few meters and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 f.ReturnResult(DialogResult.Cancel);
                                 return;
                             }
@@ -340,7 +340,7 @@ namespace EDSurfaceMiningOverlay
 
                     if (double.IsNaN(lastLat) || double.IsNaN(lastLon))
                     {
-                        MessageBox.Show("No current position available.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No current position available. Move a few meters and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         f.ReturnResult(DialogResult.Cancel);
                         return;
                     }
