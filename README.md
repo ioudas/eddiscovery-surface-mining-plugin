@@ -19,7 +19,7 @@ A transparent overlay panel for EDDiscovery designed to assist with planetary su
 1. Download the latest `EDSurfaceMiningOverlay.dll` from the [GitHub Releases]([url](https://github.com/ioudas/eddiscovery-surface-mining-plugin/releases)) page.
 2. Right-click the file, select Properties and "Unblock" it. This is Windows "feature" when you download binaries from the web.
 
-<img width="399" height="501" alt="image" src="https://github.com/user-attachments/assets/97b23737-2a07-4a86-a1b4-067d123bc9d0" />
+<img width="399" height="501" alt="image" src="https://github.com/user-attachments/assets/e7c0a186-e23d-45be-85a4-1e42596895da" />
 
 4. Copy the `.dll` file to your EDDiscovery plugins folder, located at: `%LOCALAPPDATA%\EDDiscovery\DLL`
 5. Restart EDDiscovery. The new panel will be available in the "Add Tab" or "Pop Outs" menus.
