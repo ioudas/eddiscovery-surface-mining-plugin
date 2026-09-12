@@ -1,0 +1,58 @@
+name: Build and Release Plugin
+
+on:
+  push:
+    branches: [ "master", "main" ]
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    # 1. Checkout the plugin repository
+    - name: Checkout Plugin
+      uses: actions/checkout@v4
+      with:
+        path: plugin
+
+    # 2. Checkout EDDiscovery repository (side-by-side)
+    - name: Checkout EDDiscovery
+      uses: actions/checkout@v4
+      with:
+        repository: EDDiscovery/EDDiscovery
+        path: EDDiscovery
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v2
+
+    - name: Restore EDDiscovery NuGet packages
+      run: nuget restore EDDiscovery\EDDiscovery.sln
+
+    - name: Build EDDiscovery Dependencies
+      run: msbuild EDDiscovery\EDDiscovery.sln /p:Configuration=Release /p:Platform="Any CPU" /m
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Build Plugin
+      run: dotnet build plugin\EDSurfaceMiningOverlay.csproj -c Release
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: EDSurfaceMiningOverlay.dll
+        path: plugin\bin\Release\net48\EDSurfaceMiningOverlay.dll
+
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: plugin\bin\Release\net48\EDSurfaceMiningOverlay.dll
